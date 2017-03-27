@@ -2,12 +2,12 @@ package runconfig
 
 import (
 	"encoding/json"
-	"fmt"
+//	"fmt"
 	"io"
 
 	"github.com/docker/docker/api/types/container"
 	networktypes "github.com/docker/docker/api/types/network"
-	"github.com/docker/docker/volume"
+//	"github.com/docker/docker/volume"
 )
 
 // ContainerDecoder implements httputils.ContainerDecoder
