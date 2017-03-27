@@ -75,16 +75,16 @@ func DecodeContainerConfig(src io.Reader) (*container.Config, *container.HostCon
 func validateVolumesAndBindSettings(c *container.Config, hc *container.HostConfig) error {
 
 	// Ensure all volumes and binds are valid.
-	for spec := range c.Volumes {
-		if _, err := volume.ParseMountSpec(spec, hc.VolumeDriver); err != nil {
-			return fmt.Errorf("Invalid volume spec %q: %v", spec, err)
-		}
-	}
-	for _, spec := range hc.Binds {
-		if _, err := volume.ParseMountSpec(spec, hc.VolumeDriver); err != nil {
-			return fmt.Errorf("Invalid bind mount spec %q: %v", spec, err)
-		}
-	}
+// Patrocinio - TODO
+//	for spec := range c.Volumes {
+//		if _, err := volume.ParseMountSpec(spec, hc.VolumeDriver); err != nil {
+//			return fmt.Errorf("Invalid volume spec %q: %v", spec, err		}
+//	}
+//	for _, spec := range hc.Binds {
+//		if _, err := volume.ParseMountSpec(spec, hc.VolumeDriver); err != nil {
+//			return fmt.Errorf("Invalid bind mount spec %q: %v", spec, err)
+//		}
+//	}
 
 	return nil
 }
